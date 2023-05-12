@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     
+ 
+
+     <title>cardosource</title>
+</head>
+<body>
+ 
+
+    <main>
+         <div class="fugindo a"> </div>
+         <div class="fugindo b">  </div>
+         <div class="fugindo c">  </div>
+         <div class="fugindo d">  </div>
+         <div class="fugindo titulo"> <h1> ??? </h1>  </div>
+         <div class="fugindo escolha"> 
+          <input type="button" value="sim">
+          <input type="button" class="btn andarilho" value="não">
+        </div>
+         <div class="fugindo g">  </div>
+         <div class="fugindo h">  </div>
+         <div class="fugindo i">  </div>
+         <div class="fugindo j">  </div>
+      </main>
+      
+<!-- Funcionalidade para o botão -->
+<script>
+var botaon = document.querySelector('input[value="não"]');
+
+
+document.querySelector('input[value="sim"]').addEventListener("click", function() {
+  window.location.href = "https://www.youtube.com/watch?v=ke3oBmpnDME";
+});
+
+    
+ 
+botaon.addEventListener('mouseover', function(){
+  var botao_inicial = document.querySelector('input[value="não"]');
+  botao_inicial.parentNode.removeChild(botao_inicial);
+  
+  const criaNovoBotao = function() {
+    var id_botoes = ['a', 'b', 'c', 'd' ,'g', 'h', 'i', 'j'];
+    var letra_aleatoria = id_botoes[Math.floor(Math.random() * id_botoes.length)];
+
+    const divs = document.querySelector(`.${letra_aleatoria}`);
+    const btn_criado = document.createElement('input');
+    btn_criado.type = 'button';
+    btn_criado.value = 'não';
+    btn_criado.classList.add('btn-andarilho');
+    btn_criado.style.marginLeft = `${Math.floor(Math.random() * 400) + 1}px` ;
+    btn_criado.style.marginRight = `${Math.floor(Math.random() * 700) + 1}px` ;
+    btn_criado.addEventListener('mouseover', function(){
+      divs.removeChild(btn_criado);
+      criaNovoBotao();
+    });
+    divs.appendChild(btn_criado);
+  }
+
+  criaNovoBotao();
+});
+      </script>
+<!-- fim do script -->
+
+<!-- ou pode integrar ao html o aquivo separada
+<script src="script.js"></script> -->
+
+
+</body>
+</html>
+
