@@ -8,6 +8,6 @@ Em seguida,  adiciona um ouvinte de eventos ao elemento com o valor "sim", que r
 
 Adiciona um ouvinte de eventos ao botão "não", que é acionado quando o mouse passa sobre ele. 
 
-Quando  o botão "não" atual é removido, uma nova função é criada para criar um novo botão "Não" que é adicionado a um elemento aleatório na página.
+Quando  o botão "não" atual é removido, uma nova função é criada para criar um novo botão "não" que é adicionado a um elemento aleatório na página.
 
 Esse novo botão também é definido para se mover aleatoriamente pela página e é substituído por outro botão "não" quando o mouse passa sobre ele. 
