@@ -1,4 +1,4 @@
-# BotaoAndarilho
+# Botão Andarilho
 
 Script é responsável por criar um botão _Não_ que se movimenta aleatoriamente pela página e é substituído por outro botão "Não" quando o mouse passa sobre ele.
 
